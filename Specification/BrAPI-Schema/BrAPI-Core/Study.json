@@ -249,15 +249,41 @@
                 },
                 "program": {
                     "$ref": "Program.json#/$defs/Program",
-                    "description": "A program identifier to search for",
-                    "referencedAttribute": "trials",
+                    "description": "A program or projects this Study was conducted for",
+                    "referencedAttribute": "studies",
                     "relationshipType": "many-to-one"
+                },
+                "programs": {
+                    "title": "Programs",
+                    "description": "A set of Programs or projects this Study was conducted for.",
+                    "referencedAttribute": "studies",
+                    "relationshipType": "many-to-many",
+                    "items": {
+                        "$ref": "Program.json#/$defs/Program"
+                    },
+                    "type": [
+                        "null",
+                        "array"
+                    ]
                 },
                 "trial": {
                     "$ref": "Trial.json#/$defs/Trial",
-                    "description": "The ID which uniquely identifies a trial",
+                    "description": "A Trial or experiments this single location Study was conducted for",
                     "referencedAttribute": "studies",
                     "relationshipType": "many-to-one"
+                },
+                "trials": {
+                    "title": "Trials",
+                    "description": "A set of experiments or trials this single location Study was conducted as part of.",
+                    "referencedAttribute": "studies",
+                    "relationshipType": "many-to-many",
+                    "items": {
+                        "$ref": "Trial.json#/$defs/Trial"
+                    },
+                    "type": [
+                        "null",
+                        "array"
+                    ]
                 },
                 "callSets": {
                     "title": "CallSets",

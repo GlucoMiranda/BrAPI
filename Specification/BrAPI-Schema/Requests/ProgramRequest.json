@@ -9,6 +9,12 @@
                     "$ref": "Parameters/ProgramParameters.json#/$defs/ProgramParameters"
                 },
                 {
+                    "$ref": "Parameters/StudyParameters.json#/$defs/StudyParameters"
+                },
+                {
+                    "$ref": "Parameters/TrialParameters.json#/$defs/TrialParameters"
+                },
+                {
                     "type": "object",
                     "properties": {
                         "abbreviations": {

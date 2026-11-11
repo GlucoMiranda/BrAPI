@@ -99,16 +99,23 @@
                 "trials": {
                     "title": "Trials",
                     "description": "A set of experiments or trials conducted as part of a program.",
-                    "example": [
-                        {
-                            "$ref": "Trial.json#/$defs/Trial"
-                        }
-                    ],
-                    "referencedAttribute": "program",
-                    "relationshipType": "one-to-many",
+                    "referencedAttribute": "programs",
+                    "relationshipType": "many-to-many",
                     "items": {
-                        "$ref": "Trial.json#/$defs/Trial",
-                        "description": "Trials"
+                        "$ref": "Trial.json#/$defs/Trial"
+                    },
+                    "type": [
+                        "null",
+                        "array"
+                    ]
+                },
+                "studies": {
+                    "title": "Studies",
+                    "description": "A set of single location studies conducted as part of a program.",
+                    "referencedAttribute": "programs",
+                    "relationshipType": "many-to-many",
+                    "items": {
+                        "$ref": "Study.json#/$defs/Study"
                     },
                     "type": [
                         "null",
